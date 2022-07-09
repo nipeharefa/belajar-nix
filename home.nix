@@ -3,8 +3,8 @@
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "nipeharefa";
-  home.homeDirectory = "/Users/nipeharefa";
+  # home.username = "nipeharefa";
+  # home.homeDirectory = "/Users/nipeharefa";
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
@@ -18,4 +18,8 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+  home.packages = with pkgs; [
+    lcov
+    nodejs-16_x
+  ];
 }
