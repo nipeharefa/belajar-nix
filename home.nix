@@ -19,6 +19,8 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   home.packages = with pkgs; [
+    flyctl
+    
     lcov
     nodejs-16_x
   ];
